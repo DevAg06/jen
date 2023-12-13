@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Register</title>
+        <script>
+            function Random()
+            {
+                var num1=document.getElementById("t1");
+                var num4=num1.value=Math.floor(Math.random() * 10);
+                var num2=document.getElementById("t2");
+                var num5=num2.value=Math.floor(Math.random() * 10);
+                var num3=document.getElementById("t3");
+                var num6=num3.value=Math.floor(Math.random() * 10);
+            if(num4==num5 && num5==num6)
+            {
+                alert("All are equal");
+            }
+            else if(num4==num5 && num5!=num6 ||num4!=num5 && num5==num6 || num4==num6 && num6!=num5)
+            {
+                alert("Two are equal");
+            }
+            else
+            {
+                alert("Unequal");
+            }}
+
+        </script>
+    </head>
+    <body>
+        <input type="text" id="t1">
+        <input type="text" id="t2">
+        <input type="text" id="t3">
+        <button onclick="Random()">Spin</button>
+    </body>
+</html>
